@@ -45,23 +45,28 @@ function LoginForm() {
   }
 
   return (
-    <>
+    <div className="border p-4 m-4 w-min">
       <form onSubmit={handleSubmit(onSubmit)}>
         {error && error.message}
 
         {success && <p>Check your email</p>}
-        <h1>Login</h1>
+        <h1 className="text-center font-bold text-2xl text-indigo-600">
+          Login
+        </h1>
 
         <input
+          className="my-4 p-4 pr-12 text-sm border border-indigo-200 rounded shadow-sm"
           type="email"
-          placeholder="jane.doe@example.com"
+          placeholder="john.doe@mail.com"
           {...register('email')}
         />
-        <button>Login</button>
+        <button className="btn mb-4">Login</button>
       </form>
 
-      <Link href="/register">Register</Link>
-    </>
+      <Link href="/register">
+        <button className=" btn">Register</button>
+      </Link>
+    </div>
   )
 }
 
