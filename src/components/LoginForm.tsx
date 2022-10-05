@@ -45,7 +45,7 @@ function LoginForm() {
   }
 
   return (
-    <div className="border p-4 m-4 w-min">
+    <div className="border p-4 my-4 w-min mx-auto">
       <form onSubmit={handleSubmit(onSubmit)}>
         {error && error.message}
 
